@@ -1,0 +1,5 @@
+
+*.pickle
+chest_xray/*
+# Exlude the entire .env folder and everything inside it
+.env/*
