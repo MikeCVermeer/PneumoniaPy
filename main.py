@@ -28,7 +28,7 @@ else:
     print('Using the CPU\n')
 
 # Use the selected device for the following operations
-with tf.device(device):
+with tf.device(device): 
 
 
     np.random.seed(22)
@@ -170,17 +170,17 @@ with tf.device(device):
 
     model = Model(inputs=input1, outputs=output1)
 
-    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracyuracy'])
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     # Using fit_generator() instead of fit() because we are going to use data augmentation. Note that the randomness is changed every epoch
-    history = model.fit_generator(train_gen, epochs=30, validation_data=(x_test, y_test_one_hot))
+    history = model.fit_generator(train_gen, epochs=20, validation_data=(x_test, y_test_one_hot))
 
     # Saving the model
     model.save('pneumonia_cnn.h5')
 
-    print('Displaying accuracyuracy...')
+    print('Displaying accuracy...')
     plt.figure(figsize=(8, 6))
-    plt.title('accuracyuracy')
+    plt.title('accuracy')
     plt.plot(history.history['accuracy'])
     plt.plot(history.history['val_accuracy'])
     plt.legend(['accuracy', 'val_accuracy'])
