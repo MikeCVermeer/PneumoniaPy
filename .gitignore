@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 
 *.pickle
 chest_xray/*
 # Exlude the entire .env folder and everything inside it
+=======
+chest_xray/*
+testcuda.py
+>>>>>>> Stashed changes
 .env/*
